@@ -1,0 +1,15 @@
+#!name=过期啦
+#!desc=过期啦
+#!author=
+scriptings:
+  - http_response:
+      name: gql.js
+      script_url: >-
+        https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/gql.js
+      match: >-
+        ^https:\/\/expire\.vanemu\.com\/1\.1\/functions\/getUserInfo
+      body_required: true
+      timeout: 60
+mitm:
+  hostnames:
+    - 'expire.vanemu.com'
