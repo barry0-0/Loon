@@ -1,8 +1,7 @@
-#!name=Spotify(>=iOS15)
-#!openUrl=https://github.com/barry0-0/Loon
+#!name=Spotify
+#!homepage=https://github.com/barry0-0/Loon
 #!system = iOS,iPadOS
-#!date = 2024-12-10 04:32:17
-#!system_version = 17.0
+#!system_version = 15.0
 # 功能: 1.去除播放广告 2.歌手/专辑列表正常展示 3.去除随机播放
 
 [Rewrite]
