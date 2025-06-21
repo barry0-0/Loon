@@ -40,7 +40,6 @@ bdduditu_enable = switch,true,false,tag=百度地图-脚本开关
 bddutpba_enable = switch,true,false,tag=百度贴吧-脚本开关
 lawson_enable = switch,true,false,tag=罗森点点-脚本开关
 bohejmkh_enable = switch,true,false,tag=薄荷健康-脚本开关
-cdyytmqi_enable = switch,false,true,tag=彩云天气-脚本开关
 cdnngogo_enable = switch,true,false,tag=菜鸟裹裹-脚本开关
 cdxb_enable = switch,true,false,tag=财新-脚本开关
 davsdmpk_enable = switch,true,false,tag=大众点评-脚本开关
@@ -55,7 +54,6 @@ hlzh_enable = switch,true,false,tag=航旅纵横-脚本开关
 hema_enable = switch,true,false,tag=盒马-脚本开关
 hftx_enable = switch,true,false,tag=汇付天下-脚本开关
 itzj_enable = switch,true,false,tag=IT之家-脚本开关
-jhsh_enable = switch,true,false,tag=建行生活-脚本开关
 jkds_enable = switch,true,false,tag=京东-脚本开关
 jkxi_enable = switch,true,false,tag=京喜-脚本开关
 keep_enable = switch,true,false,tag=keep-脚本开关
@@ -3902,9 +3900,6 @@ http-response ^https:\/\/api\.boohee\.com\/open-interface\/v1\/string\/market_pa
 
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
-# > 彩云天气
-http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json/_end_/caiyun.json?type=mock&target-app=loon-plugin, timeout=60, tag=彩云天气, enable={cdyytmqi_enable}
-
 # > 菜鸟裹裹
 http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/header.js, timeout=60, tag=菜鸟裹裹, enable={cdnngogo_enable}
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body=true, timeout=60, tag=菜鸟裹裹, enable={cdnngogo_enable}
@@ -4001,8 +3996,6 @@ http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds
 
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
-# > 建行生活
-http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB04 script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeAds.js, requires-body=true, timeout=60, tag=建行生活, enable={jhsh_enable}
 # 删除首页+金融+我的多个横幅等乱七八糟的广告
 http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json/_end_/A3341AB05.json?type=mock&target-app=loon-plugin, timeout=60, tag=建行生活, enable={jhsh_enable}
 # 内置饿了么
